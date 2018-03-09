@@ -9,14 +9,21 @@ public class Parkir {
      * total roda > 4		-> basement
      */
 
-    public void parkirIfElse(int jumlahRoda) {
+    int jumlahRoda = 3;
+
+    public void parkirIfElse() {
+
         System.out.println("Jumlah Roda : " + jumlahRoda);
+
         if (jumlahRoda <= 2) {
             System.out.println("Kendaraan diparkir di sebelah kiri gedung");
-        } else if (jumlahRoda <= 4) {
+
+        } else if (jumlahRoda > 3 && jumlahRoda <= 4) {
             System.out.println("Kendaraan diparkir di sebelah kanan gedung");
+
         } else {
             System.out.println("Kendaraan diparkir di basement");
+
         }
     }
 
