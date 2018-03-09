@@ -21,8 +21,17 @@ public class Parkir {
     }
 
     public void parkirSwitchCase(int jumlahRoda) {
+        System.out.println("Jumlah Roda : " + jumlahRoda);
         switch (jumlahRoda) {
             case 2:
+                System.out.println("Kendaraan diparkir di sebelah kiri gedung");
+                break;
+            case 4:
+                System.out.println("Kendaraan diparkir di sebelah kanan gedung");
+                break;
+            default:
+                System.out.println("Kendaraan diparkir di basement");
+                break;
         }
     }
 }
