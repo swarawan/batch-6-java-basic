@@ -4,7 +4,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        Parkir parkir = new Parkir();
-        parkir.parkir();
+
+        Mahasiswa mahasiswa = new Mahasiswa();
+        mahasiswa.printDataDiri();
     }
 }
