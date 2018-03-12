@@ -29,7 +29,7 @@ public class Kalkulator {
         }
     }
 
-    public void hitung(int nilai1, int nilai2, int operator) {
+    private void hitung(int nilai1, int nilai2, int operator) {
 
         int hasil;
         if (operator == 1) {
