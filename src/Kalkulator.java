@@ -5,15 +5,17 @@ import java.util.Scanner;
  */
 public class Kalkulator {
 
-    public Kalkulator() {
+    KalkulatorModel model = new KalkulatorModel();
+
+    public void printKalkulator() {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            System.out.print("Masukkan Nama : ");
-            int nilai1 = scanner.nextInt();
+            System.out.print("Masukkan Nilai 1 : ");
+            model.setNilai1(scanner.nextInt());
 
-            System.out.print("Masukkan NIM : ");
-            int nilai2 = scanner.nextInt();
+            System.out.print("Masukkan Nilai 2 : ");
+            model.setNilai2(scanner.nextInt());
 
             System.out.println("Pilih Operator");
             System.out.println("1. Tambah");
@@ -23,15 +25,24 @@ public class Kalkulator {
             System.out.print("Pilihan (1..4)? ");
             int operator = scanner.nextInt();
 
-            hitung(nilai1, nilai2, operator);
+            hitung(operator);
         } catch (Exception ex) {
-            System.out.print("Error: " + ex.getMessage());
+            errorHandling();
+        } finally {
+            printKalkulator();
         }
     }
 
-    private void hitung(int nilai1, int nilai2, int operator) {
+    private void errorHandling() {
+        System.out.println("Salah brooooooo.... integer harusnya");
+    }
 
+    private void hitung(int operator) {
+
+        int nilai1 = model.getNilai1();
+        int nilai2 = model.getNilai2();
         int hasil;
+        
         if (operator == 1) {
             hasil = nilai1 + nilai2;
             System.out.printf("%d + %d = %d", nilai1, nilai2, hasil);
