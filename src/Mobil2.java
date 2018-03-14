@@ -1,7 +1,7 @@
 /**
  * Created by rioswarawan on 3/7/18.
  */
-public class Mobil {
+public class Mobil2 {
 
     Integer jumlahRoda = 4;
     Integer umur = 50;
@@ -12,7 +12,7 @@ public class Mobil {
     int jumlahKnalpot = 1;
     String warna = "merah";
 
-    public Mobil(String namaToko) {
+    public Mobil2(String namaToko) {
         System.out.println("Saya beli mobile di toko = " + namaToko);
     }
 
@@ -22,7 +22,7 @@ public class Mobil {
 
     public void print() {
         System.out.println("Jumlah Roda = " + jumlahRoda);
-        System.out.println("Warna Mobil = " + warna);
+        System.out.println("Warna Mobil2 = " + warna);
     }
 
     public int tambahRoda() {
